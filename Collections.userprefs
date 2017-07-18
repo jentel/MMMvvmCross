@@ -1,5 +1,32 @@
 ﻿<Properties StartupConfiguration="{BB70692D-9C4B-47AC-84B6-4BBBEE1BDB56}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Collections.Droid/Views/PolymorphicListItemTypesView.cs">
+    <Files>
+      <File FileName="Collections.Droid/Views/PolymorphicListItemTypesView.cs" Line="42" Column="37" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Collections" expanded="True">
+            <Node name="Collections.Core" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True" />
+            </Node>
+            <Node name="Collections.Droid" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="PolymorphicListItemTypesView.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Collections.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

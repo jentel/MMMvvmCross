@@ -1,0 +1,9 @@
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile259.AssemblyAttribute.cs
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/bin/Debug/Collections.Core.pdb
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/bin/Debug/Collections.Core.dll
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/obj/Debug/Collections.Core.dll
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/obj/Debug/Collections.Core.pdb
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/bin/Debug/MvvmCross.Platform.dll
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/bin/Debug/MvvmCross.Core.dll
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/bin/Debug/MvvmCross.Binding.dll
+/Users/jennifert/Documents/MMMvvmCross/Collections.Core/bin/Debug/MvvmCross.Localization.dll
