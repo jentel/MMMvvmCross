@@ -48,6 +48,7 @@ namespace Collections.Droid.Views
 
                 return base.GetBindableView(convertView, source, templateId);
             }
+
         }
     }
 }

@@ -33,5 +33,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Collections.Droid PreferredExecutionTarget="Android.Nexus 10 (KitKat)" />
+  <MonoDevelop.Ide.ItemProperties.Collections.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.831972C9-990A-4552-8C8A-65031C914074" />
   <MultiItemStartupConfigurations />
 </Properties>
