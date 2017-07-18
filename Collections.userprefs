@@ -1,0 +1,10 @@
+﻿<Properties StartupConfiguration="{BB70692D-9C4B-47AC-84B6-4BBBEE1BDB56}|Default">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Collections.Droid PreferredExecutionTarget="Android.Nexus 10 (KitKat)" />
+  <MultiItemStartupConfigurations />
+</Properties>
