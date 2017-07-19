@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{A197861D-4DC7-47EA-84D9-620CBB68E423}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Collections.Core/ViewModels/Samples/BaseSampleViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Collections.Core/ViewModels/Samples/ListItems/KittenGenerator.cs">
     <Files>
       <File FileName="Collections.Droid/Views/PolymorphicListItemTypesView.cs" Line="48" Column="17" />
       <File FileName="Collections.Core/ViewModels/MainMenuViewModel.cs" Line="35" Column="88" />
       <File FileName="Collections.Core/ViewModels/Samples/1. SmallFixed/SmallFixedViewModel.cs" Line="20" Column="53" />
       <File FileName="Collections.Core/ViewModels/Samples/ListItems/Kitten.cs" Line="6" Column="45" />
-      <File FileName="Collections.Core/ViewModels/Samples/ListItems/KittenGenerator.cs" Line="1" Column="1" />
+      <File FileName="Collections.Core/ViewModels/Samples/ListItems/KittenGenerator.cs" Line="48" Column="14" />
       <File FileName="Collections.Core/ViewModels/Samples/ListItems/Animal.cs" Line="1" Column="1" />
       <File FileName="Collections.iOS/Views/MainMenuView.cs" Line="42" Column="10" />
       <File FileName="Collections.iOS/Views/Samples/BaseKittenTableView.cs" Line="1" Column="1" />
       <File FileName="Collections.Core/ViewModels/Samples/6. SpecificPositions/SpecificPositionsViewModel.cs" Line="10" Column="42" />
       <File FileName="Collections.iOS/Views/Samples/Cells/KittenCell.cs" Line="26" Column="10" />
-      <File FileName="Collections.Core/ViewModels/Samples/BaseSampleViewModel.cs" Line="30" Column="42" />
+      <File FileName="Collections.Core/ViewModels/Samples/BaseSampleViewModel.cs" Line="16" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
