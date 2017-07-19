@@ -9,7 +9,7 @@ namespace Collections.Touch
     [Register("KittenCell")]
     public partial class KittenCell : MvxTableViewCell
     {
-        private const string BindingText = "Name Name;ImageUrl ImageUrl";
+        private const string BindingText = "Name Name;ImageUrl ImageUrl; SelectedCommand ShowACommand";
 
         private MvxImageViewLoader _imageHelper;
 

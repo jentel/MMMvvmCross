@@ -1,35 +1,25 @@
-﻿<Properties StartupConfiguration="{BB70692D-9C4B-47AC-84B6-4BBBEE1BDB56}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Collections.Droid/Views/PolymorphicListItemTypesView.cs">
+﻿<Properties StartupConfiguration="{A197861D-4DC7-47EA-84D9-620CBB68E423}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Collections.Core/ViewModels/Samples/BaseSampleViewModel.cs">
     <Files>
-      <File FileName="Collections.Droid/Views/PolymorphicListItemTypesView.cs" Line="42" Column="37" />
+      <File FileName="Collections.Droid/Views/PolymorphicListItemTypesView.cs" Line="48" Column="17" />
+      <File FileName="Collections.Core/ViewModels/MainMenuViewModel.cs" Line="35" Column="88" />
+      <File FileName="Collections.Core/ViewModels/Samples/1. SmallFixed/SmallFixedViewModel.cs" Line="20" Column="53" />
+      <File FileName="Collections.Core/ViewModels/Samples/ListItems/Kitten.cs" Line="6" Column="45" />
+      <File FileName="Collections.Core/ViewModels/Samples/ListItems/KittenGenerator.cs" Line="1" Column="1" />
+      <File FileName="Collections.Core/ViewModels/Samples/ListItems/Animal.cs" Line="1" Column="1" />
+      <File FileName="Collections.iOS/Views/MainMenuView.cs" Line="42" Column="10" />
+      <File FileName="Collections.iOS/Views/Samples/BaseKittenTableView.cs" Line="1" Column="1" />
+      <File FileName="Collections.Core/ViewModels/Samples/6. SpecificPositions/SpecificPositionsViewModel.cs" Line="10" Column="42" />
+      <File FileName="Collections.iOS/Views/Samples/Cells/KittenCell.cs" Line="26" Column="10" />
+      <File FileName="Collections.Core/ViewModels/Samples/BaseSampleViewModel.cs" Line="30" Column="42" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Collections" expanded="True">
-            <Node name="Collections.Core" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Packages" expanded="True" />
-            </Node>
-            <Node name="Collections.Droid" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Packages" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="PolymorphicListItemTypesView.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Collections.iOS" expanded="True">
-              <Node name="Packages" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/jennifert/Documents/MMMvvmCross/Collections.iOS/Views/Samples/BaseKittenTableView.cs" relfile="Collections.iOS/Views/Samples/BaseKittenTableView.cs" line="45" column="1" />
+      <Breakpoint file="/Users/jennifert/Documents/MMMvvmCross/Collections.Core/ViewModels/Samples/1. SmallFixed/SmallFixedViewModel.cs" relfile="Collections.Core/ViewModels/Samples/1. SmallFixed/SmallFixedViewModel.cs" line="38" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Collections.Droid PreferredExecutionTarget="Android.Nexus 10 (KitKat)" />

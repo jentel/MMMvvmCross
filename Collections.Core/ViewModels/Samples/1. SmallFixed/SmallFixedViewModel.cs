@@ -1,5 +1,9 @@
 ﻿using Collections.Core.ViewModels.Samples.ListItems;
 using System.Collections.Generic;
+using MvvmCross.Core.Navigation;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core.ViewModels.Samples.SmallFixed
 {
@@ -7,8 +11,12 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
     {
         private List<Kitten> _kittens;
 
-        public SmallFixedViewModel()
+        private readonly IMvxNavigationService _navigationService;
+
+        public SmallFixedViewModel(IMvxNavigationService navigationService)
         {
+            _navigationService = navigationService;
+
             Kittens = new List<Kitten>(CreateKittens(10));
         }
 
@@ -21,5 +29,33 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
                 RaisePropertyChanged(() => Kittens);
             }
         }
+
+        private IMvxAsyncCommand _showACommand;
+        public IMvxAsyncCommand ShowACommand
+        {
+            get
+            {
+                return _showACommand ?? (_showACommand = new MvxAsyncCommand(async () =>
+                {
+                    await _navigationService.Navigate<NextViewModel>(null);
+                }));
+            }
+        }
+
+        //public async Task NavigateToNewPage()
+        //{
+        //   await _navigationService.Navigate<NextViewModel>(null);
+        //}
+
+        #region Temporary VM
+
+        public class NextViewModel : BaseSampleViewModel
+        {
+            public async Task Initialize(object parameter)
+            {
+                Debug.WriteLine("Made it to next VM");
+            }
+        }
+        #endregion
     }
 }
