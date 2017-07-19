@@ -17,18 +17,7 @@ namespace Collections.Touch
         {
             base.ViewWillAppear(animated);
 
-            //var source1 = new TableSource(TableView)
-            //{
-            //    UseAnimations = false, //true,
-            //    AddAnimation = UITableViewRowAnimation.Left,
-            //    RemoveAnimation = UITableViewRowAnimation.Right
-            //                                            ,
-            //    //SelectionChangedCommand = viewmodel.ShowACommand
-
-            //};
-
             var source = new TableSource(TableView);
-
             this.CreateBinding(source).To<SmallFixedViewModel>(vm => vm.Kittens).Apply();
             this.CreateBinding(source).For(s => s.SelectionChangedCommand).To<SmallFixedViewModel>(vm => vm.ShowACommand).Apply();
 
