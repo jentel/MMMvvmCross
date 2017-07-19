@@ -32,19 +32,10 @@ namespace Collections.Touch
 
         public class TableSource : MvxSimpleTableViewSource
         {
-            //private static readonly NSString Identifier = new NSString("KittenCell");
-            //private const string BindingText = "SelectedCommand ShowACommand";
-
             public TableSource(UITableView tableView)
                 : base(tableView, "KittenCell", "KittenCell")
             {
             }
-
-            //public TableSource(UITableView tableView)
-            //    : base(tableView, UITableViewCellStyle.Default, Identifier, BindingText)
-            //{
-            //}
-        
         }
     }
 }

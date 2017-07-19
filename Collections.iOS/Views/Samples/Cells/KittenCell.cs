@@ -9,7 +9,7 @@ namespace Collections.Touch
     [Register("KittenCell")]
     public partial class KittenCell : MvxTableViewCell
     {
-        private const string BindingText = "Name Name;ImageUrl ImageUrl; SelectedCommand ShowACommand";
+        private const string BindingText = "Name Name;ImageUrl ImageUrl";
 
         private MvxImageViewLoader _imageHelper;
 
@@ -42,20 +42,20 @@ namespace Collections.Touch
             return 120f;
         }
 
-        public override void TouchesBegan(NSSet touches, UIEvent evt)
-        {
-            AnimateToScale(1.2f);
-        }
+        //public override void TouchesBegan(NSSet touches, UIEvent evt)
+        //{
+        //    AnimateToScale(1.2f);
+        //}
 
-        public override void TouchesCancelled(NSSet touches, UIEvent evt)
-        {
-            AnimateToScale(1.0f);
-        }
+        //public override void TouchesCancelled(NSSet touches, UIEvent evt)
+        //{
+        //    AnimateToScale(1.0f);
+        //}
 
-        public override void TouchesEnded(NSSet touches, UIEvent evt)
-        {
-            AnimateToScale(1.0f);
-        }
+        //public override void TouchesEnded(NSSet touches, UIEvent evt)
+        //{
+        //    AnimateToScale(1.0f);
+        //}
 
         private void AnimateToScale(float scale)
         {

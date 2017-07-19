@@ -1,8 +1,6 @@
 ﻿using Collections.Core.ViewModels.Samples.ListItems;
 using System.Collections.Generic;
 using MvvmCross.Core.Navigation;
-using System.Threading.Tasks;
-using System.Diagnostics;
 using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core.ViewModels.Samples.SmallFixed
@@ -30,32 +28,16 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             }
         }
 
-        private IMvxAsyncCommand _showACommand;
-        public IMvxAsyncCommand ShowACommand
+        private IMvxCommand _showACommand;
+        public IMvxCommand ShowACommand
         {
             get
             {
-                return _showACommand ?? (_showACommand = new MvxAsyncCommand(async () =>
+                return _showACommand ?? (_showACommand = new MvxCommand(() =>
                 {
-                    await _navigationService.Navigate<NextViewModel>(null);
+                    _navigationService.Navigate<MainMenuViewModel>();
                 }));
             }
         }
-
-        //public async Task NavigateToNewPage()
-        //{
-        //   await _navigationService.Navigate<NextViewModel>(null);
-        //}
-
-        #region Temporary VM
-
-        public class NextViewModel : BaseSampleViewModel
-        {
-            public async Task Initialize(object parameter)
-            {
-                Debug.WriteLine("Made it to next VM");
-            }
-        }
-        #endregion
     }
 }
