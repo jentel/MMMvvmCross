@@ -179,6 +179,10 @@
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+    <Compile Include="Views\Samples\SimpleBioPageView.cs" />
+    <Compile Include="Views\Samples\SimpleBioPageView.designer.cs">
+      <DependentUpon>SimpleBioPageView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Collections.Core\Collections.Core.csproj">
@@ -191,6 +195,7 @@
     <InterfaceDefinition Include="Views\Samples\Cells\DogCell.xib" />
     <InterfaceDefinition Include="Views\Samples\SpecificPositionsView.xib" />
     <InterfaceDefinition Include="Views\Samples\Cells\HeaderCell.xib" />
+    <InterfaceDefinition Include="Views\Samples\SimpleBioPageView.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

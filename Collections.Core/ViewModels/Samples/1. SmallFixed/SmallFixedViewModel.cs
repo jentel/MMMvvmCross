@@ -35,7 +35,7 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             {
                 return _showACommand ?? (_showACommand = new MvxCommand(() =>
                 {
-                    _navigationService.Navigate<MainMenuViewModel>();
+                    _navigationService.Navigate<SimpleBioPageViewModel>();
                 }));
             }
         }
