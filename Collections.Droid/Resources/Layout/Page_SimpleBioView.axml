@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1">
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
+  <MvvmCross.Binding.Droid.Views.MvxImageView
         android:layout_width="match_parent"
-        android:layout_height="206.5dp"
+        android:layout_height="wrap_content"
         android:id="@+id/imgKitten" />
+  
     <TextView
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -21,4 +21,5 @@
         android:layout_height="261.5dp"
         android:id="@+id/Bio"
         android:layout_marginTop="0.0dp" />
+    
 </LinearLayout>
