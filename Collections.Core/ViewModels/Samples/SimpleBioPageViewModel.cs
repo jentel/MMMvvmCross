@@ -1,17 +1,30 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
+using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core
 {
-    public class SimpleBioPageViewModel : MvxViewModel
+    public class SimpleBioPageViewModel : MvxViewModel<SimpleBioPageViewModel.BioInfo>
     {
         public SimpleBioPageViewModel()
         {
             Random _random = new Random();
 
-            KittenInformation = new BioInfo("Fluffy", "Likes to bite", string.Format("http://placekitten.com/{0}/{0}", _random.Next(20) + 300));
+            //KittenInformation = new BioInfo("Fluffy", "Likes to bite", string.Format("http://placekitten.com/{0}/{0}", _random.Next(20) + 300));
         }
 
+        //public void Initialize(string name, string image)
+        //{
+        //    KittenInformation = new BioInfo(name, "Likes to bite", image);
+        //}
+
+        public override Task Initialize(BioInfo parameter)
+        {
+            KittenInformation = parameter;
+            return Task.FromResult(0);
+        }
+       
         public BioInfo KittenInformation { get; private set; }
 
         public class BioInfo

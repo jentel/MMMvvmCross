@@ -102,17 +102,29 @@ namespace Collections.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f040007
+			public const int Bio = 2130968583;
+			
 			// aapt resource value: 0x7f040000
 			public const int MvvmCrossTagId = 2130968576;
 			
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
+			// aapt resource value: 0x7f040006
+			public const int Name = 2130968582;
+			
 			// aapt resource value: 0x7f040003
 			public const int TheListView = 2130968579;
 			
 			// aapt resource value: 0x7f040002
 			public const int buttonPanel = 2130968578;
+			
+			// aapt resource value: 0x7f040005
+			public const int imgKitten = 2130968581;
+			
+			// aapt resource value: 0x7f040004
+			public const int linearLayout1 = 2130968580;
 			
 			static Id()
 			{
@@ -155,10 +167,13 @@ namespace Collections.Droid
 			public const int Page_PolymorphicView = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Page_SpecificPositions = 2130903049;
+			public const int Page_SimpleBioView = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int SplashScreen = 2130903050;
+			public const int Page_SpecificPositions = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int SplashScreen = 2130903051;
 			
 			static Layout()
 			{
