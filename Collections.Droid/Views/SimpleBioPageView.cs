@@ -32,10 +32,10 @@ namespace Collections.Droid
 
         private void InitializeBindings()
         {
-            var name = FindViewById(Resource.Id.Name);
+            var name = FindViewById<TextView>(Resource.Id.Name);
             this.CreateBinding(name).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Name).Apply();
-            this.CreateBinding(FindViewById(Resource.Id.imgKitten)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.ImageUrl);
-            this.CreateBinding(FindViewById(Resource.Id.Bio)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Bio);
+            this.CreateBinding(FindViewById<ImageView>(Resource.Id.imgKitten)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.ImageUrl);
+            this.CreateBinding(FindViewById<TextView>(Resource.Id.Bio)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Bio);
         }
 
    }
