@@ -16,8 +16,6 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
         {
             _navigationService = navigationService;
 
-            //ShowACommand = new MvxAsyncCommand<SimpleBioPageViewModel.BioInfo>(UpdateBio);
-
             Kittens = new List<Kitten>(CreateKittens(10));
         }
 
@@ -31,35 +29,18 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             }
         }
 
-        private IMvxCommand _showACommand; //<SimpleBioPageViewModel.BioInfo> 
+        private IMvxCommand _showACommand;
         public IMvxCommand ShowACommand
         {
-            get
-            {
-
-            //    return _showACommand ?? (_showACommand = new MvxAsyncCommand<SimpleBioPageViewModel.BioInfo>(UpdateBio));
-
-            return _showACommand ?? (_showACommand =
-                                     new MvxCommand(() =>
-                                     {
-                                     _navigationService.Navigate<SimpleBioPageViewModel, SimpleBioPageViewModel.BioInfo>(new SimpleBioPageViewModel.BioInfo("fluffy", "Likes to bite", Kittens[2].ImageUrl));
-                                     }));
-
+        	get
+        	{
+                return _showACommand ?? (_showACommand = new MvxCommand<Kitten>(UpdateBio));
             }
-
-            //get; set;
         }
 
-        //private async Task UpdateBio(SimpleBioPageViewModel.BioInfo bio)
-        //{
-        //    //var result = await _navigationService.Navigate<SimpleBioPageViewModel, SimpleBioPageViewModel.BioInfo>(bio);
-
-        //     await _navigationService.Navigate<SimpleBioPageViewModel, SimpleBioPageViewModel.BioInfo>(bio);
-
-        //    //if (result != null)
-        //    //{
-        //    //    // do nothing???
-        //    //}
-        //}
+        private void UpdateBio(Kitten bio)
+        {
+            _navigationService.Navigate<SimpleBioPageViewModel, Kitten>(bio);
+        }
     }
 }
