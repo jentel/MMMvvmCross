@@ -17,6 +17,10 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             _navigationService = navigationService;
 
             Kittens = new List<Kitten>(CreateKittens(10));
+            foreach (var kitten in Kittens)
+            {
+                kitten.IsNavigation = true;
+            }
         }
 
         public List<Kitten> Kittens

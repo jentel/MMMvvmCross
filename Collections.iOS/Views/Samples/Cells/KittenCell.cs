@@ -6,10 +6,9 @@ using CoreGraphics;
 
 namespace Collections.Touch
 {
-    [Register("KittenCell")]
     public partial class KittenCell : MvxTableViewCell
     {
-        private const string BindingText = "Name Name;ImageUrl ImageUrl";
+        private const string BindingText = "Name Name;ImageUrl ImageUrl;IsNavigation IsNavigation";
 
         private MvxImageViewLoader _imageHelper;
 
@@ -69,6 +68,20 @@ namespace Collections.Touch
         private void InitialiseImageHelper()
         {
             _imageHelper = new MvxImageViewLoader(() => KittenImageView);
+        }
+
+        public override void LayoutSubviews()
+        {
+            base.LayoutSubviews();
+
+            imgCheveron.Hidden = !IsNavigation;
+        }
+
+        private bool _isNavigation;
+        public bool IsNavigation
+        {
+            get { return _isNavigation; }
+            set { _isNavigation = value; }
         }
     }
 }
