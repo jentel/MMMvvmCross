@@ -18,7 +18,7 @@ using Android.Transitions;
 
 namespace Collections.Droid
 {
-    [Activity(Label = "SimpleBioPageView")]
+    [Activity(Label = "Simple Bio Page")]
     public class SimpleBioPageView : MvxActivity
     {
 

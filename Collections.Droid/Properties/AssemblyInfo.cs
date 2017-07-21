@@ -44,3 +44,5 @@ using Android.App;
 
 [assembly: UsesPermission(Manifest.Permission.Internet)]
 [assembly: UsesPermission(Manifest.Permission.WriteExternalStorage)]
+
+[assembly: Application(Icon = "@drawable/upload")]

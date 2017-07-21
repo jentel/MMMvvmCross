@@ -140,6 +140,7 @@
     <None Include="packages.config" />
     <None Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Layout\Page_SimpleBioView.axml" />
+    <AndroidResource Include="Resources\Drawable\upload.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\SplashScreen.axml" />
