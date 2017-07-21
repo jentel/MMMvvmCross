@@ -11,19 +11,19 @@ using UIKit;
 
 namespace Collections.Touch
 {
-	[Register ("HeaderCell")]
-	partial class HeaderCell
-	{
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel MainLabel { get; set; }
+    [Register ("HeaderCell")]
+    partial class HeaderCell
+    {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel MainLabel { get; set; }
 
-		void ReleaseDesignerOutlets ()
-		{
-			if (MainLabel != null) {
-				MainLabel.Dispose ();
-				MainLabel = null;
-			}
-		}
-	}
+        void ReleaseDesignerOutlets ()
+        {
+            if (MainLabel != null) {
+                MainLabel.Dispose ();
+                MainLabel = null;
+            }
+        }
+    }
 }

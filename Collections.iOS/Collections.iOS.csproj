@@ -197,5 +197,30 @@
     <InterfaceDefinition Include="Views\Samples\Cells\HeaderCell.xib" />
     <InterfaceDefinition Include="Views\Samples\SimpleBioPageView.xib" />
   </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Media.xcassets\Contents.json" />
+    <ImageAsset Include="Media.xcassets\UICheveron.imageset\Contents.json" />
+    <ImageAsset Include="Media.xcassets\UICheveron.imageset\Cheveron.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Media.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-40%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-40%403x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-72.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-76.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Media.xcassets\UICheveron.imageset\" />
+    <Folder Include="Media.xcassets\AppIcon.imageset\" />
+    <Folder Include="Media.xcassets\.imageset\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
