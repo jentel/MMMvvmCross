@@ -22,7 +22,7 @@ namespace Collections.Touch
 
             InitializeImageHelper();
 
-            this.CreateBinding(lblName).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Name).Apply();
+            this.CreateBinding(lblName).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Name).WithConversion(new NameToNameWithPunctuationValueConverter(), null).Apply();
             this.CreateBinding(_imageHelper).To((SimpleBioPageViewModel vm) => vm.KittenInformation.ImageUrl).Apply();
             this.CreateBinding(tvBioInfo).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Bio).Apply();
         }
