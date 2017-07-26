@@ -39,6 +39,16 @@ namespace Collections.Droid.Views
                 get { return 2; }
             }
 
+
+            protected override View GetBindableView(View convertView, object source, ViewGroup parent, int templateId)
+            {
+                if (source is Kitten)
+                    templateId = Resource.Layout.ListItem_Kitten;
+                else if (source is Dog)
+                    templateId = Resource.Layout.ListItem_Dog;
+
+                return base.GetBindableView(convertView, source, parent, templateId);
+            }
             //protected override View GetBindableView(View convertView, object source, int templateId)
             //{
             //    if (source is Kitten)
