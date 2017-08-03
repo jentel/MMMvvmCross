@@ -183,6 +183,7 @@
     <Compile Include="Views\Samples\SimpleBioPageView.designer.cs">
       <DependentUpon>SimpleBioPageView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\AlertService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Collections.Core\Collections.Core.csproj">
@@ -221,6 +222,7 @@
     <Folder Include="Media.xcassets\UICheveron.imageset\" />
     <Folder Include="Media.xcassets\AppIcon.imageset\" />
     <Folder Include="Media.xcassets\.imageset\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

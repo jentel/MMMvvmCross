@@ -8,8 +8,11 @@ namespace Collections.Core
 {
     public class SimpleBioPageViewModel : MvxViewModel<Kitten>
     {
-        public SimpleBioPageViewModel()
+        private IAlertService _alert;
+
+        public SimpleBioPageViewModel(IAlertService alertService)
         {
+            _alert = alertService;
         }
 
         public override Task Initialize(Kitten parameter)
@@ -19,5 +22,13 @@ namespace Collections.Core
         }
        
         public Kitten KittenInformation { get; private set; }
+
+
+        public override void Appearing()
+        {
+            base.Appearing();
+
+            _alert.ShowAlert();
+        }
     }
 }
