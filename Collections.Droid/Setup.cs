@@ -11,6 +11,7 @@ using Android.Content;
 using Collections.Core;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 
 namespace Collections.Droid
 {
@@ -24,6 +25,8 @@ namespace Collections.Droid
 
         protected override IMvxApplication CreateApp()
         {
+            Mvx.RegisterType<IAlertService, AlertService>();
+
             return new App();
         }
 

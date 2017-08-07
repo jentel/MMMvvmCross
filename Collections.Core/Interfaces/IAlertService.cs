@@ -6,6 +6,9 @@ namespace Collections.Core
     public interface IAlertService
     {
         Task<bool> ShowAlert(string title, string prompt, string positivePromt, string negativePrompt, int x);
+
+
+
         void ShowAlert(string title, string message, string positivePromt, string negativePrompt, Action positiveAction = null, Action negativeAction = null);
     }
 

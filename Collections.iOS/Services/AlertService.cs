@@ -18,20 +18,20 @@ namespace Collections.Touch
 
 
             var alertController = UIAlertController.Create(title, message, UIAlertControllerStyle.Alert);
-            if (positiveAction == null)
+            if (positiveAction == null && !string.IsNullOrWhiteSpace(positivePromt))
             {
                 alertController.AddAction(UIAlertAction.Create(positivePromt, UIAlertActionStyle.Default, alert => NullHandler()));
             }
-            else
+            else if (!string.IsNullOrWhiteSpace(positivePromt))
             {
                 alertController.AddAction(UIAlertAction.Create(positivePromt, UIAlertActionStyle.Default, alert => positiveAction()));
             }
 
-            if (negativeAction == null)
+            if (negativeAction == null && !string.IsNullOrWhiteSpace(negativePrompt))
             {
                 alertController.AddAction(UIAlertAction.Create(negativePrompt, UIAlertActionStyle.Cancel, alert => NullHandler()));
             }
-            else
+            else if (!string.IsNullOrWhiteSpace(negativePrompt))
             {
                 alertController.AddAction(UIAlertAction.Create(negativePrompt, UIAlertActionStyle.Cancel, alert => negativeAction()));
             }
