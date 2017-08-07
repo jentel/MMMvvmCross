@@ -23,7 +23,7 @@
     <ConsolePause>False</ConsolePause>
     <MtouchDebug>True</MtouchDebug>
     <MtouchProfiling>True</MtouchProfiling>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>None</MtouchLink>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchArch>i386</MtouchArch>
   </PropertyGroup>
@@ -217,6 +217,11 @@
     <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
     <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon.png" />
     <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-167.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-40.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-Small-50%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Media.xcassets\UICheveron.imageset\" />
