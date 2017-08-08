@@ -12,15 +12,15 @@ namespace Collections.Core
         void ShowAlert(string title, string message, string positivePromt, string negativePrompt, Action positiveAction = null, Action negativeAction = null);
     }
 
-    public class InputResults
-    {
-        public InputResults(string result, bool cancelled)
-        {
-            Result = result;
-            Cancelled = cancelled;
-        }
+    //public class InputResults
+    //{
+    //    public InputResults(string result, bool cancelled)
+    //    {
+    //        Result = result;
+    //        Cancelled = cancelled;
+    //    }
 
-        public string Result { get; private set; }
-        public bool Cancelled { get; private set; }
-    }
+    //    public string Result { get; private set; }
+    //    public bool Cancelled { get; private set; }
+    //}
 }

@@ -46,5 +46,11 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
         {
             _navigationService.Navigate<SimpleBioPageViewModel, Kitten>(bio);
         }
+
+
+        public override void ViewAppearing()
+        {
+            base.ViewAppearing();
+        }
     }
 }

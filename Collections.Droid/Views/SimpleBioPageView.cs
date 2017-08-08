@@ -19,7 +19,7 @@ using Android.Transitions;
 namespace Collections.Droid
 {
     [Activity(Label = "Simple Bio Page")]
-    public class SimpleBioPageView : MvxActivity
+    public class SimpleBioPageView : BaseActivity
     {
 
         protected override void OnViewModelSet()

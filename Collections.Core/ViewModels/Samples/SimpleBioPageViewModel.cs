@@ -23,10 +23,9 @@ namespace Collections.Core
        
         public Kitten KittenInformation { get; private set; }
 
-
-        public override void Appearing()
+        public override void ViewAppearing()
         {
-            base.Appearing();
+            base.ViewAppearing();
 
             //var result = await _alert.ShowAlert("No", "Yes", "Did you mean to click on this kitten?", "You sure?");
 
@@ -43,24 +42,24 @@ namespace Collections.Core
         }
 
 
-        private async void Alert()
-        {
+        //private async void Alert()
+        //{
 
-            try
-            {
+        //    try
+        //    {
 
                
 
-                //if (result)
-                //{
-                //    Close(this);
-                //}
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Alert Error: " + e);
-            }
-        }
+        //        //if (result)
+        //        //{
+        //        //    Close(this);
+        //        //}
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        throw new Exception("Alert Error: " + e);
+        //    }
+        //}
 
         private void NoClicked()
         {

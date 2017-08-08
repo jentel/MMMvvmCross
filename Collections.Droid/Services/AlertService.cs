@@ -9,41 +9,41 @@ namespace Collections.Droid
 {
     public class AlertService : IAlertService
     {
-        public AlertService()
-        {
-        }
+        //public AlertService()
+        //{
+        //}
 
-        public void ShowAlert(string negativePrompt, string positivePromt, string message, string title)
-        {
+        //public void ShowAlert(string negativePrompt, string positivePromt, string message, string title)
+        //{
 
-            var tcs = new TaskCompletionSource<bool>();
+        //    var tcs = new TaskCompletionSource<bool>();
 
-            var alert = new AlertDialog.Builder(ActivityHolder.CurrentActivity);
+        //    var alert = new AlertDialog.Builder(ActivityHolder.CurrentActivity);
 
-            alert.SetTitle(title);
-            alert.SetMessage(message);
+        //    alert.SetTitle(title);
+        //    alert.SetMessage(message);
 
-            alert.SetPositiveButton(positivePromt, (object sender, DialogClickEventArgs e) =>
-            {
-                tcs.SetResult(true);
-            });
+        //    alert.SetPositiveButton(positivePromt, (object sender, DialogClickEventArgs e) =>
+        //    {
+        //        tcs.SetResult(true);
+        //    });
 
-            alert.SetNegativeButton(negativePrompt, (sender, e) =>
-            {
-                tcs.SetResult(false);
-            });
+        //    alert.SetNegativeButton(negativePrompt, (sender, e) =>
+        //    {
+        //        tcs.SetResult(false);
+        //    });
 
-            var dialog = alert.Create();
-            if (!dialog.IsShowing)
-            {
-                dialog.Show();
-            }
-            else
-            {
-                dialog.Dismiss();
-                dialog.Dispose();
-            }
-        }
+        //    var dialog = alert.Create();
+        //    if (!dialog.IsShowing)
+        //    {
+        //        dialog.Show();
+        //    }
+        //    else
+        //    {
+        //        dialog.Dismiss();
+        //        dialog.Dispose();
+        //    }
+        //}
 
         public Task<bool> ShowAlert(string title, string prompt, string positivePromt, string negativePrompt, int x)
         {
@@ -69,7 +69,7 @@ namespace Collections.Droid
 
             if (negativeAction == null)
             {
-                alert.SetPositiveButton(positivePromt, (sender, e) => NullHandler());
+                alert.SetNegativeButton(negativePrompt, (sender, e) => NullHandler());
             }
             else
             {

@@ -66,10 +66,10 @@ namespace Collections.Touch
             //return tcs.Task;
 
             var tcs = new TaskCompletionSource<bool>();
-            var alert = negativePrompt == string.Empty ?
-                                                new UIAlertView(title, message, null, positivePromt) :
-                                                new UIAlertView(title, message, null, negativePrompt, positivePromt);
-            alert.Clicked += (sender, e) => tcs.SetResult(e.ButtonIndex != alert.CancelButtonIndex);
+            //var alert = negativePrompt == string.Empty ?
+            //                                    new UIAlertView(title, message, null, positivePromt) :
+            //                                    new UIAlertView(title, message, null, negativePrompt, positivePromt);
+            //alert.Clicked += (sender, e) => tcs.SetResult(e.ButtonIndex != alert.CancelButtonIndex);
 
 
             //var alert = new UIAlertView
