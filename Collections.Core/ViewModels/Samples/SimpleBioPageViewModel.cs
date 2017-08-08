@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics.Contracts;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Collections.Core.ViewModels.Samples.ListItems;
 using MvvmCross.Core.ViewModels;
 
@@ -27,39 +25,8 @@ namespace Collections.Core
         {
             base.ViewAppearing();
 
-            //var result = await _alert.ShowAlert("No", "Yes", "Did you mean to click on this kitten?", "You sure?");
-
-            //if (result)
-            //{
-            //    Close(this);
-            //}
-
-            //Alert();
-
-           // _alertService.ShowAlert("You sure?", "Did you mean to click on this kitten?", "No", "Yes");
-
              _alertService.ShowAlert("You sure?", "Did you mean to click on this kitten?", "No", "Yes", NoClicked);
         }
-
-
-        //private async void Alert()
-        //{
-
-        //    try
-        //    {
-
-               
-
-        //        //if (result)
-        //        //{
-        //        //    Close(this);
-        //        //}
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw new Exception("Alert Error: " + e);
-        //    }
-        //}
 
         private void NoClicked()
         {
