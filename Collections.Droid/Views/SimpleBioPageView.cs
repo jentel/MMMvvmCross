@@ -36,7 +36,8 @@ namespace Collections.Droid
             this.CreateBinding(FindViewById<TextView>(Resource.Id.Name)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Name)
                 .WithConversion(new NameToNameWithPunctuationValueConverter(), null).Apply();
             this.CreateBinding(FindViewById<MvxImageView>(Resource.Id.imgKitten)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.ImageUrl).Apply();
-            this.CreateBinding(FindViewById<TextView>(Resource.Id.Bio)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Bio).Apply() ;
+            this.CreateBinding(FindViewById<TextView>(Resource.Id.Bio)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Bio).Apply();
+            this.CreateBinding(FindViewById<EditText>(Resource.Id.txtName)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Name).Apply();
         }
    }
 }

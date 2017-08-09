@@ -105,8 +105,8 @@ namespace Collections.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040007
-			public const int Bio = 2130968583;
+			// aapt resource value: 0x7f040008
+			public const int Bio = 2130968584;
 			
 			// aapt resource value: 0x7f040000
 			public const int MvvmCrossTagId = 2130968576;
@@ -128,6 +128,9 @@ namespace Collections.Droid
 			
 			// aapt resource value: 0x7f040004
 			public const int linearLayout1 = 2130968580;
+			
+			// aapt resource value: 0x7f040007
+			public const int txtName = 2130968583;
 			
 			static Id()
 			{
