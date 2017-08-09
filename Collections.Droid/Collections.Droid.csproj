@@ -116,7 +116,7 @@
     <Compile Include="Views\ExpandableView.cs" />
     <Compile Include="Views\SimpleBioPageView.cs" />
     <Compile Include="Services\AlertService.cs" />
-    <Compile Include="Plumming\ActivityHolder.cs" />
+    <Compile Include="Plumbing\ActivityHolder.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />

@@ -1,9 +1,7 @@
-﻿using System;
-using Collections.Core;
+﻿using Collections.Core;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
-using UIKit;
 
 namespace Collections.Touch
 {
@@ -25,6 +23,9 @@ namespace Collections.Touch
             this.CreateBinding(lblName).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Name).WithConversion(new NameToNameWithPunctuationValueConverter(), null).Apply();
             this.CreateBinding(_imageHelper).To((SimpleBioPageViewModel vm) => vm.KittenInformation.ImageUrl).Apply();
             this.CreateBinding(tvBioInfo).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Bio).Apply();
+            this.CreateBinding(txtName).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Name).Apply();
+
+            var x = new KeyboardScroller(this.View, txtName);
         }
 
         private void InitializeImageHelper()

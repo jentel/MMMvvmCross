@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Collections.Core.ViewModels.Samples.ListItems;
 using MvvmCross.Core.ViewModels;
 
@@ -15,11 +16,30 @@ namespace Collections.Core
 
         public override Task Initialize(Kitten parameter)
         {
+            if (parameter == null)
+                throw new NullReferenceException("Parameter cannot be null");
+
             KittenInformation = parameter;
             return Task.FromResult(0);
         }
-       
-        public Kitten KittenInformation { get; private set; }
+
+        private Kitten _KittenInfo;
+        public Kitten KittenInformation 
+        {
+            //get; private set;
+            get
+            {
+                return _KittenInfo;
+            }
+            set
+            {
+                if (_KittenInfo != value)
+                {
+                    _KittenInfo = value;
+                    //RaisePropertyChanged(() => _KittenInfo);
+                }
+            } 
+        }
 
         public override void ViewAppearing()
         {

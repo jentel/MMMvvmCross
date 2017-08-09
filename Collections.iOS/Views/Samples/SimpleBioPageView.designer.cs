@@ -26,6 +26,10 @@ namespace Collections.Touch
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextView tvBioInfo { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtName { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (imgKitten != null) {
@@ -41,6 +45,11 @@ namespace Collections.Touch
             if (tvBioInfo != null) {
                 tvBioInfo.Dispose ();
                 tvBioInfo = null;
+            }
+
+            if (txtName != null) {
+                txtName.Dispose ();
+                txtName = null;
             }
         }
     }
