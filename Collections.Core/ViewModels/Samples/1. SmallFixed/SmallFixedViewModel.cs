@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace Collections.Core.ViewModels.Samples.SmallFixed
 {
     public class SmallFixedViewModel : BaseSampleViewModel
     {
-        private List<Kitten> _kittens;
+        private ObservableCollection<Kitten> _kittens;
 
         private readonly IMvxNavigationService _navigationService;
 
@@ -16,20 +17,20 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
         {
             _navigationService = navigationService;
 
-            Kittens = new List<Kitten>(CreateKittens(10));
+            Kittens = new ObservableCollection<Kitten>(CreateKittens(10));
             foreach (var kitten in Kittens)
             {
                 kitten.IsNavigation = true;
             }
         }
 
-        public List<Kitten> Kittens
+        public ObservableCollection<Kitten> Kittens
         {
             get { return _kittens; }
             set
             {
                 _kittens = value;
-                RaisePropertyChanged(() => Kittens);
+                RaisePropertyChanged();
             }
         }
 
@@ -47,10 +48,11 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             _navigationService.Navigate<SimpleBioPageViewModel, Kitten>(bio);
         }
 
-
         public override void ViewAppearing()
         {
             base.ViewAppearing();
+
+
         }
     }
 }

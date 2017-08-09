@@ -20,13 +20,13 @@ namespace Collections.Core
                 throw new NullReferenceException("Parameter cannot be null");
 
             KittenInformation = parameter;
-            return Task.FromResult(0);
+            Name = parameter.Name;
+            return base.Initialize();
         }
 
         private Kitten _KittenInfo;
         public Kitten KittenInformation 
         {
-            //get; private set;
             get
             {
                 return _KittenInfo;
@@ -36,9 +36,26 @@ namespace Collections.Core
                 if (_KittenInfo != value)
                 {
                     _KittenInfo = value;
-                    //RaisePropertyChanged(() => _KittenInfo);
+                    RaisePropertyChanged();
                 }
             } 
+        }
+
+        private string _Name;
+        public string Name
+        {
+        	get
+        	{
+                return _Name;
+        	}
+        	set
+            {
+                if (_Name != value)
+                {
+                    _Name = value;                   
+                    RaisePropertyChanged();
+                }
+            }
         }
 
         public override void ViewAppearing()
@@ -46,6 +63,20 @@ namespace Collections.Core
             base.ViewAppearing();
 
              _alertService.ShowAlert("You sure?", "Did you mean to click on this kitten?", "No", "Yes", NoClicked);
+        }
+
+        public override void ViewDisappearing()
+        {
+            base.ViewDisappearing();
+
+            if (!string.Equals(Name, "This kitten does not have a name yet."))
+            {
+                KittenInformation.Name = string.Empty;
+            }
+            else if (!string.IsNullOrWhiteSpace(Name))
+            {
+                KittenInformation.Name = Name;
+            }
         }
 
         private void NoClicked()
