@@ -23,6 +23,15 @@ namespace Collections.Touch
 
             TableView.Source = source;
             TableView.ReloadData();
+
+       //     BeginInvokeOnMainThread(delegate {
+       //         var source = new TableSource(TableView);
+
+    			//this.CreateBinding(source).To<SmallFixedViewModel>(vm => vm.Kittens).Apply();
+       //         this.CreateBinding(source).For(s => s.SelectionChangedCommand).To<SmallFixedViewModel>(vm => vm.ShowACommand).Apply();
+       //         TableView.Source = source;
+       //         TableView.ReloadData();
+       //     });
         }
     }
 }

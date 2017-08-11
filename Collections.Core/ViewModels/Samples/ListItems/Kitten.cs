@@ -6,5 +6,6 @@
         public string ImageUrl { get; set; }
         public string Bio { get; set; }
         public bool IsNavigation { get; set; }
+        public int Index { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace Collections.Core.ViewModels.Samples.SmallFixed
 {
@@ -17,10 +18,14 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
         {
             _navigationService = navigationService;
 
+            int i = 0;
+
             Kittens = new ObservableCollection<Kitten>(CreateKittens(10));
             foreach (var kitten in Kittens)
             {
                 kitten.IsNavigation = true;
+                kitten.Index = i;
+                i++;
             }
         }
 
@@ -43,16 +48,15 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             }
         }
 
-        private void UpdateBio(Kitten bio)
+        private async void UpdateBio(Kitten bio)
         {
-            _navigationService.Navigate<SimpleBioPageViewModel, Kitten>(bio);
-        }
+            var result = await _navigationService.Navigate<SimpleBioPageViewModel, Kitten, Kitten>(bio);
 
-        public override void ViewAppearing()
-        {
-            base.ViewAppearing();
-
-
+            if (result != null)
+            {
+                var kitten = Kittens.SingleOrDefault(x => x.Index == result.Index);
+                kitten.Name = result.Name;
+            }
         }
     }
 }
