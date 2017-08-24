@@ -75,7 +75,7 @@ namespace Collections.Core
         {
             base.ViewDisappearing();
 
-            if (!string.Equals(Name, "This kitten does not have a name yet."))
+            if (string.Equals(Name, "This kitten does not have a name yet."))
             {
                 KittenInformation.Name = string.Empty;
             }

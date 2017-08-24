@@ -56,6 +56,9 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             {
                 var kitten = Kittens.SingleOrDefault(x => x.Index == result.Index);
                 kitten.Name = result.Name;
+
+                Kittens.Remove(result);
+                Kittens.Insert(kitten.Index, result);
             }
         }
     }
