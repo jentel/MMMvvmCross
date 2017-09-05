@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res/Collections.Droid"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Mvx.MvxListView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        local:MvxItemTemplate="@layout/listitem_mainmenu"
-        local:MvxBind="ItemsSource MenuItems" />
-<!-- <android.support.design.widget.BottomNavigationView
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation" />
+    <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -17,5 +17,5 @@
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@drawable/nav_item_color_state"
         app:itemTextColor="@drawable/nav_item_color_state"
-        app:menu="@menu/bottom_navigation_main" />-->
-</FrameLayout>
+        app:menu="@menu/bottom_navigation_main" />
+</RelativeLayout>

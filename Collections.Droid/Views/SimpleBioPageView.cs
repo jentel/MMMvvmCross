@@ -19,7 +19,7 @@ using Android.Transitions;
 namespace Collections.Droid
 {
     [Activity(Label = "Simple Bio Page")]
-    public class SimpleBioPageView : BaseActivity
+    public class SimpleBioPageView : MvxActivity
     {
 
         protected override void OnViewModelSet()
@@ -29,6 +29,12 @@ namespace Collections.Droid
             SetContentView(Resource.Layout.Page_SimpleBioView);
 
             InitializeBindings();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+			ActivityHolder.CurrentActivity = this;
         }
 
         private void InitializeBindings()

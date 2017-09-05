@@ -8,7 +8,7 @@ namespace Collections.Core
     {
         public override void Initialize()
         {
-            RegisterAppStart<MainMenuViewModel>();
+            RegisterAppStart<BaseViewModel>();
         }
     }
 }
