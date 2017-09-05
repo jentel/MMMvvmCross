@@ -1,10 +1,15 @@
 using System;
+using System.Collections.Generic;
+using Foundation;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.iOS.Views;
+using MvvmCross.iOS.Views;
 using UIKit;
 
 namespace Collections.Touch
 {
     public abstract class BaseDynamicKittenTableView
-        : BaseKittenTableView
+        : MvxTableViewController
     {
         private UIBarButtonItem _rightButton;
 
@@ -15,6 +20,21 @@ namespace Collections.Touch
             _rightButton = new UIBarButtonItem(UIBarButtonSystemItem.Action);
             _rightButton.Clicked += HandleRightButtonClicked;
             NavigationItem.RightBarButtonItem = _rightButton;
+
+			var source = new TableSource(TableView)
+			{
+				UseAnimations = true,
+				AddAnimation = UITableViewRowAnimation.Left,
+				RemoveAnimation = UITableViewRowAnimation.Right
+			};
+
+			this.AddBindings(new Dictionary<object, string>
+				{
+					{source, "ItemsSource Kittens"}
+				});
+
+			TableView.Source = source;
+			TableView.ReloadData();
         }
 
         private void HandleRightButtonClicked(object sender, EventArgs e)
@@ -43,5 +63,18 @@ namespace Collections.Touch
         protected abstract void AddKittensPressed();
 
         protected abstract void KillKittensPressed();
+
+		public class TableSource : MvxSimpleTableViewSource
+		{
+			public TableSource(UITableView tableView)
+				: base(tableView, "KittenCell", "KittenCell")
+			{
+			}
+
+			public override System.nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+			{
+				return 120f;
+			}
+		}
     }
 }

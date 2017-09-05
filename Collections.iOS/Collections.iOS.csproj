@@ -185,6 +185,12 @@
     </Compile>
     <Compile Include="Services\AlertService.cs" />
     <Compile Include="Plumbing\KeyboardScroller.cs" />
+    <Compile Include="Views\TabBarController.cs" />
+    <Compile Include="Views\TabBarController.designer.cs">
+      <DependentUpon>TabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ITabBarPresenter.cs" />
+    <Compile Include="Interfaces\ITabBarPresenterHost.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Collections.Core\Collections.Core.csproj">
@@ -198,6 +204,7 @@
     <InterfaceDefinition Include="Views\Samples\SpecificPositionsView.xib" />
     <InterfaceDefinition Include="Views\Samples\Cells\HeaderCell.xib" />
     <InterfaceDefinition Include="Views\Samples\SimpleBioPageView.xib" />
+    <InterfaceDefinition Include="Views\TabBarController.xib" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Media.xcassets\Contents.json">
@@ -275,6 +282,7 @@
     <Folder Include="Media.xcassets\AppIcon.imageset\" />
     <Folder Include="Media.xcassets\UICheveron.imageset\" />
     <Folder Include="Plumbing\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

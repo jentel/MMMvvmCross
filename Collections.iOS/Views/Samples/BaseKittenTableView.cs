@@ -4,12 +4,19 @@ using MvvmCross.Binding.iOS.Views;
 using UIKit;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
+using Collections.Core.ViewModels.Samples;
 
 namespace Collections.Touch
 {
-    public class BaseKittenTableView
-        : MvxTableViewController
+    public class BaseKittenTableView<TViewModel>
+        : MvxTableViewController where TViewModel : BaseSampleViewModel
     {
+        public new TViewModel ViewModel
+        {
+            get { return (TViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();

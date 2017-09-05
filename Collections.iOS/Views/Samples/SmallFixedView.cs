@@ -6,7 +6,7 @@ using UIKit;
 
 namespace Collections.Touch
 {
-    public class SmallFixedView : BaseKittenTableView
+    public class SmallFixedView : BaseKittenTableView<SmallFixedViewModel>
     {
         public SmallFixedView()
         {
