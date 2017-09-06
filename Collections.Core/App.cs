@@ -1,5 +1,7 @@
 ﻿using Collections.Core.ViewModels;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
 
 namespace Collections.Core
 {

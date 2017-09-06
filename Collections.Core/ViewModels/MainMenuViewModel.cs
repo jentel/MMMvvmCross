@@ -9,10 +9,11 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using Collections.Core.ViewModels.Samples;
 
 namespace Collections.Core.ViewModels
 {
-	public class MainMenuViewModel : MvxViewModel
+	public class MainMenuViewModel : BaseSampleViewModel
 	{
 		public MainMenuViewModel()
 		{

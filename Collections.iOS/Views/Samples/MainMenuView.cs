@@ -4,10 +4,11 @@ using MvvmCross.Binding.iOS.Views;
 using Foundation;
 using UIKit;
 using MvvmCross.Binding.BindingContext;
+using Collections.Core.ViewModels;
 
 namespace Collections.Touch
 {
-    public class MainMenuView : MvxTableViewController
+    public class MainMenuView : BaseKittenTableView<MainMenuViewModel>
     {
         public MainMenuView()
         {
