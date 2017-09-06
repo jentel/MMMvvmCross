@@ -11,11 +11,14 @@ namespace Collections.Touch
     // User Interface of the application, as well as listening (and optionally responding) to
     // application events from iOS.
     [Register("AppDelegate")]
-    public class AppDelegate
-        : MvxApplicationDelegate
+    public class AppDelegate : MvxApplicationDelegate
     {
         // class-level declarations
-        private UIWindow _window;
+        public override UIWindow Window
+        {
+            get;
+            set;
+        }
 
         //
         // This method is invoked when the application has loaded and is ready to run. In this
@@ -26,18 +29,17 @@ namespace Collections.Touch
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            _window = new UIWindow(UIScreen.MainScreen.Bounds);
+            Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             // initialize app for single screen iPhone display
-            var presenter = new MvxIosViewPresenter(this, _window);
-            var setup = new Setup(this, presenter);
+            var setup = new Setup(this, Window);
             setup.Initialize();
 
             // start the app
             var start = Mvx.Resolve<IMvxAppStart>();
             start.Start();
 
-            _window.MakeKeyAndVisible();
+            Window.MakeKeyAndVisible();
 
             return true;
         }

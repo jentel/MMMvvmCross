@@ -1,16 +1,20 @@
+using Collections.Core.ViewModels.Samples.SmallFixed;
 using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core.ViewModels
 {
-    public class FirstViewModel
-        : MvxViewModel
+    public class FirstViewModel : MvxViewModel
     {
-        private string _hello = "Hello MvvmCross";
+		public void ShowMenu()
+		{
+            ShowViewModel<MainMenuViewModel>();
+			ShowViewModel<SmallFixedViewModel>();
+		}
 
-        public string Hello
-        {
-            get { return _hello; }
-            set { _hello = value; RaisePropertyChanged(() => Hello); }
-        }
-    }
+		public void ShowHome()
+		{
+			ShowViewModel<MainMenuViewModel>();
+		}
+
+	}
 }

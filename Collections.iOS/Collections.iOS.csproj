@@ -185,6 +185,10 @@
     </Compile>
     <Compile Include="Services\AlertService.cs" />
     <Compile Include="Plumbing\KeyboardScroller.cs" />
+    <Compile Include="Views\TabBarController.cs" />
+    <Compile Include="Interfaces\ITabBarPresenterHost.cs" />
+    <Compile Include="Interfaces\ITabBarPresenter.cs" />
+    <Compile Include="Presenter\MvxTabPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Collections.Core\Collections.Core.csproj">
@@ -269,12 +273,17 @@
     <ImageAsset Include="Media.xcassets\AppIcon.appiconset\Icon-Small-50%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Media.xcassets\Home.imageset\Contents.json" />
+    <ImageAsset Include="Media.xcassets\Home.imageset\home.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Media.xcassets\.imageset\" />
     <Folder Include="Media.xcassets\AppIcon.imageset\" />
     <Folder Include="Media.xcassets\UICheveron.imageset\" />
     <Folder Include="Plumbing\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Presenter\" />
+    <Folder Include="Media.xcassets\Home.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
