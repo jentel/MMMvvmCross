@@ -1,4 +1,5 @@
 ﻿using Collections.Core;
+using Collections.Core.ValueConverters;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
@@ -24,6 +25,8 @@ namespace Collections.Touch
             this.CreateBinding(_imageHelper).To((SimpleBioPageViewModel vm) => vm.KittenInformation.ImageUrl).Apply();
             this.CreateBinding(tvBioInfo).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Bio).Apply();
             this.CreateBinding(txtName).To((SimpleBioPageViewModel vm) => vm.Name).Apply();
+
+            this.CreateBinding(lblAge).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Age).WithConversion(new AgeToAgeInMonthsValueConverter(), null).Apply();
 
             var x = new KeyboardScroller(this.View, txtName);
         }

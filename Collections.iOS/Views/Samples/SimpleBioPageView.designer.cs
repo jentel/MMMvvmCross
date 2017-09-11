@@ -1,6 +1,6 @@
 // WARNING
 //
-// This file has been generated automatically by Xamarin Studio from the outlets and
+// This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
 // Manual changes to this file will not be maintained.
 //
@@ -20,6 +20,10 @@ namespace Collections.Touch
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblAge { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblName { get; set; }
 
         [Outlet]
@@ -35,6 +39,11 @@ namespace Collections.Touch
             if (imgKitten != null) {
                 imgKitten.Dispose ();
                 imgKitten = null;
+            }
+
+            if (lblAge != null) {
+                lblAge.Dispose ();
+                lblAge = null;
             }
 
             if (lblName != null) {

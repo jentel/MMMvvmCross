@@ -8,7 +8,7 @@ namespace Collections.Touch
 {
     public partial class KittenCell : MvxTableViewCell
     {
-        private const string BindingText = "Name Name;ImageUrl ImageUrl;IsNavigation IsNavigation";
+        private const string BindingText = "Name Name;ImageUrl ImageUrl;IsNavigation IsNavigation; Age Age, Converter=AgeToAgeInMonths";
 
         private MvxImageViewLoader _imageHelper;
 
@@ -35,6 +35,12 @@ namespace Collections.Touch
             get { return _imageHelper.ImageUrl; }
             set { _imageHelper.ImageUrl = value; }
         }
+
+		public string Age
+		{
+            get { return lblAge.Text; }
+            set { lblAge.Text = value; }
+		}
 
         public static float GetCellHeight()
         {
