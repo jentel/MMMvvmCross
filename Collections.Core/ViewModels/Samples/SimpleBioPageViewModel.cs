@@ -64,8 +64,8 @@ namespace Collections.Core
         public override void ViewAppearing()
         {
             base.ViewAppearing();
-
-             _alertService.ShowAlert("You sure?", "Did you mean to click on this kitten?", "No", "Yes", NoClicked);
+            if(KittenInformation != null && !KittenInformation.ShouldPopUp)
+                _alertService.ShowAlert("You sure?", "Did you mean to click on this kitten?", "No", "Yes", NoClicked);
         }
 
         //public IMvxAsyncCommand NoClicked => new MvxAsyncCommand(async () => await _navigationService.Close(this, KittenInformation));

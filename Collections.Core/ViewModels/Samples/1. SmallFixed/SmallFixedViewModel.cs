@@ -61,5 +61,19 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
                 Kittens.Insert(kitten.Index, result);
             }
         }
+
+		public IMvxCommand AddKittenCommand
+		{
+			get { return new MvxCommand(DoAddKitten); }
+		}
+
+		private void DoAddKitten()
+		{
+			var kitten = CreateKitten();
+            kitten.ShouldPopUp = true;
+            Kittens.Insert(0,kitten);
+
+            _navigationService.Navigate<SimpleBioPageViewModel, Kitten>(kitten);
+		}
     }
 }
