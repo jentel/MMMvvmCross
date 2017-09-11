@@ -3,16 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
+using Android.Support.V4.App;
 using Android.Views;
 using Android.Widget;
 using Collections.Core.ViewModels;
+using Collections.Core.ViewModels.Samples.SmallFixed;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Platform;
 
@@ -24,7 +25,7 @@ namespace Collections.Droid.Views
 		LaunchMode = LaunchMode.SingleTop,
 		Name = "collections.droid.views.FirstActivity"
      )]
-    public class FirstActivity : MvxCachingFragmentCompatActivity<FirstViewModel>
+    public class FirstActivity : MvxAppCompatActivity<FirstViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -34,35 +35,33 @@ namespace Collections.Droid.Views
 
             SetContentView(Resource.Layout.Page_First);
 
+			var fragment = (MainMenuView)Activator.CreateInstance(typeof(MainMenuView));
+			fragment.ViewModel = new MainMenuViewModel();
+			SupportFragmentManager.BeginTransaction()
+								  .Replace(Resource.Id.content_frame, fragment, "main_menu")
+			                      .Commit();
+
             var bottomNavView = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
 			bottomNavView.NavigationItemSelected += (sender, e) =>
 			{
 				switch (e.Item.ItemId)
 				{
 					case Resource.Id.menu_cut:
-						Toast.MakeText(this, "meow", ToastLength.Short).Show();
-
-						//Android.Support.V4.App.FragmentTransaction fragmentTransaction = this.SupportFragmentManager.BeginTransaction();
-						//MainMenuView browseFragment = new MainMenuView();
-						//fragmentTransaction.Replace(Resource.Id.content_frame, (Android.Support.V4.App.Fragment)browseFragment, "main_menu");
-						//fragmentTransaction.Commit();
-
-						//var fragment = (MainMenuView)Activator.CreateInstance(typeof(MainMenuView));
-						//                  fragment.ViewModel = new MainMenuViewModel();
-						//SupportFragmentManager.BeginTransaction()
-						//                      .Replace(Resource.Id.content_frame, fragment,"main_menu")
-						//.Commit();
-
+                        SupportFragmentManager.BeginTransaction()
+                                              .Replace(Resource.Id.content_frame, fragment,"main_menu")
+                                              .Commit();
 
 
 						break;
 
 					case Resource.Id.menu_copy:
 						Toast.MakeText(this, "meow, meow", ToastLength.Short).Show();
-						//Android.Support.V4.App.FragmentTransaction fragmentTransaction2 = this.SupportFragmentManager.BeginTransaction();
-						//AboutFragment aboutFragment = new AboutFragment();
-						//fragmentTransaction2.Replace(Resource.Id.main_container, aboutFragment);
-						//fragmentTransaction2.Commit();
+						
+                        var fixedFrag = (SmallFixedView)Activator.CreateInstance(typeof(SmallFixedView));
+                        fixedFrag.ViewModel = new SmallFixedViewModel(ViewModel.Service);
+						SupportFragmentManager.BeginTransaction()
+											  .Replace(Resource.Id.content_frame, fixedFrag, "small_fixed")
+						                      .Commit();
 
 						break;
 				}

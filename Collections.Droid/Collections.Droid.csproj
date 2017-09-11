@@ -213,6 +213,8 @@
     <AndroidResource Include="Resources\Values\Colors.xml" />
     <AndroidResource Include="Resources\Values\Styles.xml" />
     <AndroidResource Include="Resources\Drawable\nav_item_color_state.xml" />
+    <AndroidResource Include="Resources\Drawable\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\Drawable\ic_star_border_black_24dp.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\SplashScreen.axml" />
