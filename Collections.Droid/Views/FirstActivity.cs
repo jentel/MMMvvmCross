@@ -47,13 +47,13 @@ namespace Collections.Droid.Views
 			{
 				switch (e.Item.ItemId)
 				{
-					case Resource.Id.menu_cut:
+                    case Resource.Id.menu_home:
                         SupportFragmentManager.BeginTransaction()
                                               .Replace(Resource.Id.content_frame, initialFragment,"main_menu")
                                               .Commit();
 						break;
 
-					case Resource.Id.menu_copy:
+                    case Resource.Id.menu_small:
 						Toast.MakeText(this, "meow, meow", ToastLength.Short).Show();
 						
                         var fixedFrag = (SmallFixedView)Activator.CreateInstance(typeof(SmallFixedView));

@@ -5795,11 +5795,11 @@ namespace Collections.Droid
 			// aapt resource value: 0x7f080089
 			public const int media_actions = 2131230857;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int menu_copy = 2131230885;
-			
 			// aapt resource value: 0x7f0800a4
-			public const int menu_cut = 2131230884;
+			public const int menu_home = 2131230884;
+			
+			// aapt resource value: 0x7f0800a5
+			public const int menu_small = 2131230885;
 			
 			// aapt resource value: 0x7f080024
 			public const int middle = 2131230756;
