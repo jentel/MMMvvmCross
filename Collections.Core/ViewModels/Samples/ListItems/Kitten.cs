@@ -7,5 +7,6 @@
         public string Bio { get; set; }
         public bool IsNavigation { get; set; }
         public int Index { get; set; }
+        public int Age { get; set; }
     }
 }

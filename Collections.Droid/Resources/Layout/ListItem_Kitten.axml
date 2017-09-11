@@ -9,11 +9,21 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         local:MvxBind="ImageUrl ImageUrl" />
-    <TextView
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_gravity="center"
-        local:MvxBind="Text Name"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            local:MvxBind="Text Name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            local:MvxBind="Text Age, Converter=AgeToAgeInMonths"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
 </LinearLayout>

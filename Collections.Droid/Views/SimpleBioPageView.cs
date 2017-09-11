@@ -15,6 +15,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Views;
 using Android.Transitions;
+using Collections.Core.ValueConverters;
 
 namespace Collections.Droid
 {
@@ -38,6 +39,9 @@ namespace Collections.Droid
             this.CreateBinding(FindViewById<MvxImageView>(Resource.Id.imgKitten)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.ImageUrl).Apply();
             this.CreateBinding(FindViewById<TextView>(Resource.Id.Bio)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Bio).Apply();
             this.CreateBinding(FindViewById<EditText>(Resource.Id.txtName)).To((SimpleBioPageViewModel vm) => vm.Name).Apply();
+
+            this.CreateBinding(FindViewById<TextView>(Resource.Id.Age)).To((SimpleBioPageViewModel vm) => vm.KittenInformation.Age)
+                .WithConversion(new AgeToAgeInMonthsValueConverter(), null).Apply();
         }
    }
 }

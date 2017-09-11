@@ -5535,7 +5535,10 @@ namespace Collections.Droid
 		{
 			
 			// aapt resource value: 0x7f0800a1
-			public const int Bio = 2131230881;
+			public const int Age = 2131230881;
+			
+			// aapt resource value: 0x7f0800a2
+			public const int Bio = 2131230882;
 			
 			// aapt resource value: 0x7f08000f
 			public const int MvvmCrossTagId = 2131230735;
@@ -5789,17 +5792,17 @@ namespace Collections.Droid
 			// aapt resource value: 0x7f08004a
 			public const int list_item = 2131230794;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int masked = 2131230883;
+			// aapt resource value: 0x7f0800a4
+			public const int masked = 2131230884;
 			
 			// aapt resource value: 0x7f080089
 			public const int media_actions = 2131230857;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int menu_home = 2131230884;
-			
 			// aapt resource value: 0x7f0800a5
-			public const int menu_small = 2131230885;
+			public const int menu_home = 2131230885;
+			
+			// aapt resource value: 0x7f0800a6
+			public const int menu_small = 2131230886;
 			
 			// aapt resource value: 0x7f080024
 			public const int middle = 2131230756;
@@ -6023,8 +6026,8 @@ namespace Collections.Droid
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int visible = 2131230882;
+			// aapt resource value: 0x7f0800a3
+			public const int visible = 2131230883;
 			
 			// aapt resource value: 0x7f080029
 			public const int withText = 2131230761;

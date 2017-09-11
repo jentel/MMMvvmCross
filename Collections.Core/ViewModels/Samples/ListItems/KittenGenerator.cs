@@ -75,7 +75,8 @@ namespace Collections.Core.ViewModels.Samples.ListItems
             {
                 Name = _names[_random.Next(_names.Count)],
                 ImageUrl = string.Format("http://placekitten.com/{0}/{0}", _random.Next(20) + 300),
-                Bio = _info[_random.Next(_info.Count)]
+                Bio = _info[_random.Next(_info.Count)],
+                Age = _random.Next(1, 12)
             };
         }
 
