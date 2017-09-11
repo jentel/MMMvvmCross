@@ -8,14 +8,13 @@ using MvvmCross.Droid.Views;
 namespace Collections.Droid.Views
 {
     [Activity(Label = "Main Menu", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class MainMenuView : MvxFragment<MainMenuViewModel>
+    public class MainMenuView : MvxFragment
     {
         public override Android.Views.View OnCreateView(Android.Views.LayoutInflater inflater, Android.Views.ViewGroup container, Android.OS.Bundle savedInstanceState)
         {
             this.EnsureBindingContextIsSet(inflater);
-            var view = this.BindingInflate(Resource.Layout.Page_MainMenuView, container, false);
-
-            return view;
+            base.OnCreateView(inflater, container, savedInstanceState);
+            return this.BindingInflate(Resource.Layout.Page_MainMenuView, null);
         }
     }
 }

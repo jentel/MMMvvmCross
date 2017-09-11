@@ -178,6 +178,8 @@
     <Compile Include="Views\BaseActivity.cs" />
     <Compile Include="Views\FirstActivity.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+    <Compile Include="Services\FragmentTypeLookup.cs" />
+    <Compile Include="Plumbing\DroidPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

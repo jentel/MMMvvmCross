@@ -59,6 +59,7 @@
     <Compile Include="ViewModels\Samples\SimpleBioPageViewModel.cs" />
     <Compile Include="ValueConverters\NameToNameWithPunctuationValueConverter.cs" />
     <Compile Include="Interfaces\IAlertService.cs" />
+    <Compile Include="Interfaces\IFragmentTypeLookup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Binding, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">

@@ -13,9 +13,8 @@ namespace Collections.Droid.Views
 		public override Android.Views.View OnCreateView(Android.Views.LayoutInflater inflater, Android.Views.ViewGroup container, Android.OS.Bundle savedInstanceState)
 		{
 			this.EnsureBindingContextIsSet(inflater);
-			var view = this.BindingInflate(Resource.Layout.Page_FixedView, container, false);
-
-			return view;
+            base.OnCreateView(inflater, container, savedInstanceState);
+			return this.BindingInflate(Resource.Layout.Page_FixedView, container, false);
 		}
     }
 }

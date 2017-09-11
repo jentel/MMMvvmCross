@@ -12,6 +12,10 @@ using Collections.Core;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using Collections.Core.Interfaces;
+using Collections.Droid.Services;
+using MvvmCross.Droid.Views;
+using Collections.Droid.Plumbing;
 
 namespace Collections.Droid
 {
@@ -36,5 +40,21 @@ namespace Collections.Droid
             MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
             MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
         }
+
+		protected override IMvxAndroidViewPresenter CreateViewPresenter()
+		{
+			var presenter = Mvx.IocConstruct<DroidPresenter>();
+
+			Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(presenter);
+
+			return presenter;
+		}
+
+		protected override void InitializeIoC()
+		{
+			base.InitializeIoC();
+
+			Mvx.ConstructAndRegisterSingleton<IFragmentTypeLookup, FragmentTypeLookup>();
+		}
     }
 }

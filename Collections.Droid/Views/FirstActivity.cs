@@ -14,7 +14,9 @@ using Android.Views;
 using Android.Widget;
 using Collections.Core.ViewModels;
 using Collections.Core.ViewModels.Samples.SmallFixed;
+using Collections.Droid.Plumbing;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Droid.Views;
 using MvvmCross.Platform;
 
 namespace Collections.Droid.Views
@@ -35,11 +37,10 @@ namespace Collections.Droid.Views
 
             SetContentView(Resource.Layout.Page_First);
 
-			var fragment = (MainMenuView)Activator.CreateInstance(typeof(MainMenuView));
-			fragment.ViewModel = new MainMenuViewModel();
-			SupportFragmentManager.BeginTransaction()
-								  .Replace(Resource.Id.content_frame, fragment, "main_menu")
-			                      .Commit();
+			var presenter = (DroidPresenter)Mvx.Resolve<IMvxAndroidViewPresenter>();
+            var initialFragment = new MainMenuView();
+            initialFragment.ViewModel = new MainMenuViewModel();
+            presenter.RegisterFragmentManager(SupportFragmentManager, initialFragment);
 
             var bottomNavView = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
 			bottomNavView.NavigationItemSelected += (sender, e) =>
@@ -48,10 +49,8 @@ namespace Collections.Droid.Views
 				{
 					case Resource.Id.menu_cut:
                         SupportFragmentManager.BeginTransaction()
-                                              .Replace(Resource.Id.content_frame, fragment,"main_menu")
+                                              .Replace(Resource.Id.content_frame, initialFragment,"main_menu")
                                               .Commit();
-
-
 						break;
 
 					case Resource.Id.menu_copy:
@@ -62,7 +61,6 @@ namespace Collections.Droid.Views
 						SupportFragmentManager.BeginTransaction()
 											  .Replace(Resource.Id.content_frame, fixedFrag, "small_fixed")
 						                      .Commit();
-
 						break;
 				}
 			};
