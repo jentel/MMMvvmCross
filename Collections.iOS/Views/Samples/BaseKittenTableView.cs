@@ -21,10 +21,7 @@ namespace Collections.Touch
                 RemoveAnimation = UITableViewRowAnimation.Right
             };
 
-            this.AddBindings(new Dictionary<object, string>
-                {
-                    {source, "ItemsSource Kittens"}
-                });
+            this.CreateBinding(source).For("ItemsSource").To("Kittens");
 
             TableView.Source = source;
             TableView.ReloadData();

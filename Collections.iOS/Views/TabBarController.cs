@@ -14,6 +14,8 @@ namespace Collections.Touch.Views
 {
     public class TabBarController : MvxTabBarViewController
     {
+		private int _createdSoFarCount = 0;
+
 		public TabBarController()
 		{
             Title = "Main Menu";
@@ -23,12 +25,9 @@ namespace Collections.Touch.Views
             ViewDidLoad();
 		}
 
-		private int _createdSoFarCount = 0;
-
 		private UIViewController CreateTabFor(string title, UITabBarSystemItem imageName, IMvxViewModel viewModel)
 		{
 			var controller = new UINavigationController();
-			controller.NavigationBar.TintColor = UIColor.Black;
 			var screen = this.CreateViewControllerFor(viewModel) as UIViewController;
 			SetTitleAndTabBarItem(screen, title, imageName);
 			controller.PushViewController(screen, false);
@@ -60,7 +59,7 @@ namespace Collections.Touch.Views
 
 			var viewControllers = new[]
 			{
-                CreateTabFor("Home", UITabBarSystemItem.MostRecent, homeViewModel),
+                CreateTabFor("Home", UITabBarSystemItem.Bookmarks, homeViewModel),
                 CreateTabFor("Favorites", UITabBarSystemItem.Favorites, favoriteViewModel)
 
 			};

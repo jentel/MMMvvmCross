@@ -10,11 +10,5 @@ namespace Collections.Touch
             var collection = new ObservableCollection<string>();
             collection.CollectionChanged += (sender, args) => { };
         }
-
-		
-		public void Include(UIBarButtonItem button)
-		{
-			button.Clicked += (sender, e) => { button.Title = button.Title + ""; };
-		}
     }
 }
