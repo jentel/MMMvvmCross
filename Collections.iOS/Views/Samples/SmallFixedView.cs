@@ -17,6 +17,10 @@ namespace Collections.Touch
         {
             base.ViewWillAppear(animated);
 
+			var button = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+			this.NavigationItem.SetRightBarButtonItem(button, true);
+			this.CreateBinding(button).To<SmallFixedViewModel>(vm => vm.AddKittenCommand).Apply();
+
             var source = new TableSource(TableView);
             this.CreateBinding(source).To<SmallFixedViewModel>(vm => vm.Kittens).Apply();
             this.CreateBinding(source).For(s => s.SelectionChangedCommand).To<SmallFixedViewModel>(vm => vm.ShowACommand).Apply();
