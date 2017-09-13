@@ -38,17 +38,6 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             }
         }
 
-   //     public override void ViewAppearing()
-   //     {
-   //         base.ViewAppearing();
-
-			////var kitten = Kittens.SingleOrDefault(x => x.Index == Index);
-			////kitten.Name = bio.Name;
-
-			////Kittens.RemoveAt(Index);
-        //    //Kittens.Insert(kitten.Index, kitten);
-        //}
-
         private IMvxCommand _showACommand;
         public IMvxCommand ShowACommand
         {
@@ -58,29 +47,9 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
             }
         }
 
-        //private int Index;
-
         private async void UpdateBio(Kitten bio)
         {
-            //Index = bio.Index;
-            var result = await _navigationService.Navigate<SimpleBioPageViewModel, Kitten, Kitten>(bio);
-            // var xy = Kittens.Single(x => x.Index == bio.Index).Name;
-            if (result != null)
-            {
-                var kitten = Kittens.SingleOrDefault(x => x.Index == result.Index);
-                kitten.Name = result.Name;
-
-                Kittens.Remove(result);
-                Kittens.Insert(kitten.Index, result);
-            }
-            //else if(bio.Name != xy)
-            //{
-            //var kitten = Kittens.SingleOrDefault(x => x.Index == bio.Index);
-            //kitten.Name = bio.Name;
-
-            //Kittens.RemoveAt(bio.Index);
-            //Kittens.Insert(kitten.Index, bio);
-            //}
+            await _navigationService.Navigate<SimpleBioPageViewModel, Kitten>(bio);
         }
 
 		public IMvxCommand AddKittenCommand

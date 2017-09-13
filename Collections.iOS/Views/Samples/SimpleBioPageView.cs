@@ -20,14 +20,6 @@ namespace Collections.Touch
         {
             base.ViewWillAppear(animated);
 
-            //var button = new UIBarButtonItem();
-            //this.NavigationItem.SetLeftBarButtonItem(button, true);
-            //this.CreateBinding(button).To<SimpleBioPageViewModel>(vm => vm.BackCommand).Apply();
-
-			var button = new UIBarButtonItem(UIBarButtonSystemItem.Add);
-            this.NavigationItem.SetRightBarButtonItem(button, true);
-            this.CreateBinding(button).To<SimpleBioPageViewModel>(vm => vm.BackCommand).Apply();
-
             InitializeImageHelper();
 
             this.CreateBinding(lblName).To((SimpleBioPageViewModel vm) => vm.Name).WithConversion(new NameToNameWithPunctuationValueConverter(), null).Apply();

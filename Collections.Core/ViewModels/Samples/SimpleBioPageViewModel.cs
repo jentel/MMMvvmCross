@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using Collections.Core.ViewModels.Samples.ListItems;
 using MvvmCross.Core.Navigation;
@@ -6,7 +6,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core
 {
-    public class SimpleBioPageViewModel : MvxViewModel<Kitten, Kitten>
+    public class SimpleBioPageViewModel : MvxViewModel<Kitten>
     {
         private IAlertService _alertService;
         private readonly IMvxNavigationService _navigationService;
@@ -72,51 +72,14 @@ namespace Collections.Core
         {
             base.ViewDisappearing();
 
-            //if (string.Equals(Name, "This kitten does not have a name yet."))
-            //{
-            //    KittenInformation.Name = string.Empty;
-            //}
-            //else if (!string.IsNullOrWhiteSpace(Name))
-            //{
-            //    KittenInformation.Name = Name;
-            //}
-           
-            //CloseWithReturn();
-        }
-
-        //private async Task CloseWithReturn()
-        //{
-        //    await _navigationService.AfterClose(this, KittenInformation);
-        //}
-
-        private IMvxCommand _backCommand;
-		public IMvxCommand BackCommand
-		{
-			get
-			{
-                return _backCommand ?? (_backCommand = new MvxCommand(CloseWithResult));
-			}
-		}
-
-        private void CloseWithResult()
-        {
-            //if (!KittenInformation.ShouldPopUp)
-
-            KittenInformation.ShouldPopUp = false;
-
-			if (string.Equals(Name, "This kitten does not have a name yet."))
-			{
-				KittenInformation.Name = string.Empty;
-			}
-			else if (!string.IsNullOrWhiteSpace(Name))
-			{
-				KittenInformation.Name = Name;
-			}
-
-
-                Close(KittenInformation);
-            //else
-                //NoClicked();
+            if (string.Equals(Name, "This kitten does not have a name yet."))
+            {
+                KittenInformation.Name = string.Empty;
+            }
+            else if (!string.IsNullOrWhiteSpace(Name))
+            {
+                KittenInformation.Name = Name;
+            }
         }
 
         private void NoClicked()

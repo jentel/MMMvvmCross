@@ -20,8 +20,13 @@ using Collections.Core.ValueConverters;
 namespace Collections.Droid
 {
     [Activity(Label = "Simple Bio Page")]
-    public class SimpleBioPageView : BaseActivity
+    public class SimpleBioPageView : MvxActivity<SimpleBioPageViewModel>
     {
+		protected override void OnResume()
+		{
+			base.OnResume();
+			ActivityHolder.CurrentActivity = this;
+		}
 
         protected override void OnViewModelSet()
         {
