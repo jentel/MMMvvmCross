@@ -3,6 +3,7 @@ using Collections.Core.ValueConverters;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
+using UIKit;
 
 namespace Collections.Touch
 {
@@ -18,6 +19,14 @@ namespace Collections.Touch
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
+
+            //var button = new UIBarButtonItem();
+            //this.NavigationItem.SetLeftBarButtonItem(button, true);
+            //this.CreateBinding(button).To<SimpleBioPageViewModel>(vm => vm.BackCommand).Apply();
+
+			var button = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+            this.NavigationItem.SetRightBarButtonItem(button, true);
+            this.CreateBinding(button).To<SimpleBioPageViewModel>(vm => vm.BackCommand).Apply();
 
             InitializeImageHelper();
 

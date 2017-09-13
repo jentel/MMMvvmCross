@@ -68,30 +68,59 @@ namespace Collections.Core
                 _alertService.ShowAlert("You sure?", "Did you mean to click on this kitten?", "No", "Yes", NoClicked);
         }
 
-        //public IMvxAsyncCommand NoClicked => new MvxAsyncCommand(async () => await _navigationService.Close(this, KittenInformation));
-        
-
         public override void ViewDisappearing()
         {
             base.ViewDisappearing();
 
-            if (string.Equals(Name, "This kitten does not have a name yet."))
-            {
-                KittenInformation.Name = string.Empty;
-            }
-            else if (!string.IsNullOrWhiteSpace(Name))
-            {
-                KittenInformation.Name = Name;
-            }
+            //if (string.Equals(Name, "This kitten does not have a name yet."))
+            //{
+            //    KittenInformation.Name = string.Empty;
+            //}
+            //else if (!string.IsNullOrWhiteSpace(Name))
+            //{
+            //    KittenInformation.Name = Name;
+            //}
+           
+            //CloseWithReturn();
+        }
 
-            Close(KittenInformation);
+        //private async Task CloseWithReturn()
+        //{
+        //    await _navigationService.AfterClose(this, KittenInformation);
+        //}
+
+        private IMvxCommand _backCommand;
+		public IMvxCommand BackCommand
+		{
+			get
+			{
+                return _backCommand ?? (_backCommand = new MvxCommand(CloseWithResult));
+			}
+		}
+
+        private void CloseWithResult()
+        {
+            //if (!KittenInformation.ShouldPopUp)
+
+            KittenInformation.ShouldPopUp = false;
+
+			if (string.Equals(Name, "This kitten does not have a name yet."))
+			{
+				KittenInformation.Name = string.Empty;
+			}
+			else if (!string.IsNullOrWhiteSpace(Name))
+			{
+				KittenInformation.Name = Name;
+			}
+
+
+                Close(KittenInformation);
+            //else
+                //NoClicked();
         }
 
         private void NoClicked()
         {
-            //await _navigationsService.Close(this, KittenInformation);
-
-            //Close(KittenInformation);
             Close(this);
         }
     }
