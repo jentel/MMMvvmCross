@@ -6,7 +6,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace Collections.Core
 {
-    public class SimpleBioPageViewModel : MvxViewModel<Kitten, Kitten>
+    public class SimpleBioPageViewModel : MvxViewModel<Kitten>
     {
         private IAlertService _alertService;
         private readonly IMvxNavigationService _navigationService;
@@ -83,8 +83,6 @@ namespace Collections.Core
             {
                 KittenInformation.Name = Name;
             }
-
-            Close(KittenInformation);
         }
 
         private void NoClicked()

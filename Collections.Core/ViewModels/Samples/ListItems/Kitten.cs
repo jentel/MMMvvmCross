@@ -1,12 +1,37 @@
-﻿namespace Collections.Core.ViewModels.Samples.ListItems
+using System.ComponentModel;
+
+namespace Collections.Core.ViewModels.Samples.ListItems
 {
-    public class Kitten : Animal
+    public class Kitten : Animal, INotifyPropertyChanged
     {
-        public string Name { get; set; }
+        private string _name;
+        public string Name 
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+                OnPropertyChanged("Name");
+            } 
+        }
         public string ImageUrl { get; set; }
         public string Bio { get; set; }
         public bool IsNavigation { get; set; }
         public int Index { get; set; }
         public int Age { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		protected virtual void OnPropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this,
+					new PropertyChangedEventArgs(propertyName));
+			}
+		}
     }
 }

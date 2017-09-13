@@ -50,16 +50,7 @@ namespace Collections.Core.ViewModels.Samples.SmallFixed
 
         private async void UpdateBio(Kitten bio)
         {
-            var result = await _navigationService.Navigate<SimpleBioPageViewModel, Kitten, Kitten>(bio);
-
-            if (result != null)
-            {
-                var kitten = Kittens.SingleOrDefault(x => x.Index == result.Index);
-                kitten.Name = result.Name;
-
-                Kittens.Remove(result);
-                Kittens.Insert(kitten.Index, result);
-            }
+            await _navigationService.Navigate<SimpleBioPageViewModel, Kitten>(bio);
         }
     }
 }
