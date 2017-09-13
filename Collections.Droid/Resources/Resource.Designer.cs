@@ -5795,8 +5795,8 @@ namespace Collections.Droid
 			// aapt resource value: 0x7f080089
 			public const int media_actions = 2131230857;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int menu_copy = 2131230885;
+			// aapt resource value: 0x7f0800a6
+			public const int menu_copy = 2131230886;
 			
 			// aapt resource value: 0x7f0800a4
 			public const int menu_cut = 2131230884;
@@ -5839,6 +5839,9 @@ namespace Collections.Droid
 			
 			// aapt resource value: 0x7f08003a
 			public const int pin = 2131230778;
+			
+			// aapt resource value: 0x7f0800a5
+			public const int place_holder = 2131230885;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;

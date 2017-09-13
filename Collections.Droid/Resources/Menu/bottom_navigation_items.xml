@@ -5,6 +5,9 @@
        android:id="@+id/menu_cut"
        android:icon="@drawable/ic_home_black_24dp"
        android:title="Home" />
+	<item
+       android:id="@+id/place_holder"
+       android:title="" />
   <item
        android:id="@+id/menu_copy"
        android:icon="@drawable/ic_star_border_black_24dp"
