@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using Collections.Core.ViewModels.Samples.ListItems;
 using MvvmCross.Core.Navigation;
@@ -80,6 +80,8 @@ namespace Collections.Core
             {
                 KittenInformation.Name = Name;
             }
+
+            KittenInformation.ShouldPopUp = false;
         }
 
         private void NoClicked()
